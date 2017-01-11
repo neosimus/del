@@ -1,12 +1,10 @@
 name = raw_input("Please enter yor name: ")
 
-def is_valid(name):
+def parse_name(name):
 	if name.isalpha():
-		return True
-	return False
+		return name.lower().capitalize()
+	else:
+		return 'world'
 
 
-if is_valid(name):
-	print 'hello', name
-else:
-	print 'hello world'
+print 'hello', parse_name(name)
